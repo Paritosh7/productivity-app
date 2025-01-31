@@ -7,7 +7,16 @@
 
 // module.exports = withNextIntlConfig(nextConfig);
 
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "github.com",
+      },
+    ],
+  },
+};
 
 const withNextIntl = require("next-intl/plugin")("./i18n.ts");
 
